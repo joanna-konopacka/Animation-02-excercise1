@@ -1,0 +1,234 @@
+.exercise1 {
+  display: flex;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  flex-grow: 1;
+}
+
+@keyframes firstPart {
+  0% {
+    top: 0;
+  }
+  30% {
+    top: 15%;
+  }
+  60% {
+    top: 30%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+.test1 {
+  background: #ff6347;
+}
+.test1 .loading1 {
+  width: 10%;
+  height: 20%;
+  border-radius: 50px;
+  border: 3px solid #eb8a7d;
+  position: relative;
+}
+.test1 .loading1 .loading1-circle {
+  width: 90%;
+  height: 50%;
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
+  background-color: whitesmoke;
+  position: absolute;
+  animation: firstPart 1s infinite linear;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes circle-border {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.test2 {
+  background: #9370db;
+}
+.test2 .loading2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-bottom: 2px solid #fff;
+  border-top: 2px solid rgba(251, 251, 251, 0.3);
+  border-left: 2px solid rgba(251, 251, 251, 0.3);
+  border-right: 2px solid rgba(251, 251, 251, 0.3);
+  animation: circle-border 1s infinite linear;
+}
+
+@keyframes green-items {
+  0% {
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+  }
+  30% {
+    width: 5px;
+    height: 30px;
+    margin: 5px;
+  }
+  60% {
+    width: 5px;
+    height: 60px;
+    margin: 5px;
+  }
+  100% {
+    width: 5px;
+    height: 60px;
+    margin: 5px;
+  }
+}
+.test3 {
+  background: #00fa9a;
+}
+
+@keyframes squize {
+  from {
+    height: 50px;
+  }
+  to {
+    height: 10px;
+  }
+}
+.loading3 {
+  display: flex;
+  align-items: center;
+}
+.loading3 span {
+  display: block;
+  width: 7px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-right: 3px;
+}
+.loading3 span:nth-of-type(1) {
+  animation: squize 0.8s 150ms ease-in-out infinite alternate;
+}
+.loading3 span:nth-of-type(2) {
+  animation: squize 0.8s 250ms ease-in-out infinite alternate;
+}
+.loading3 span:nth-of-type(3) {
+  animation: squize 0.8s 350ms ease-in-out infinite alternate;
+}
+.loading3 span:nth-of-type(4) {
+  animation: squize 0.8s 450ms ease-in-out infinite alternate;
+}
+.loading3 span:nth-of-type(5) {
+  animation: squize 0.8s 550ms ease-in-out infinite alternate;
+}
+
+.exercise2 {
+  display: flex;
+  padding: 100px;
+  min-height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.red-button {
+  padding: 20px 40px;
+  color: crimson;
+  border-radius: 40px;
+  border: 0;
+  margin: 10px;
+  text-transform: uppercase;
+  background: none;
+  box-shadow: inset 0 0 0 3px crimson;
+  cursor: pointer;
+}
+
+.blue-button {
+  padding: 20px 40px;
+  background: dodgerblue;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  margin: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.green-button {
+  padding: 20px 40px;
+  background: #2feb73;
+  border: 0;
+  color: #fff;
+  margin: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.portfolio-projects {
+  background: #fafafa;
+  padding: 100px 20px;
+}
+.portfolio-projects-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+@media (max-width: 800px) {
+  .portfolio-projects-list {
+    flex-wrap: wrap;
+  }
+}
+
+.project {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 10px;
+}
+@media (max-width: 800px) {
+  .project {
+    width: 100%;
+  }
+}
+.project-link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-family: sans-serif;
+  overflow: hidden;
+  width: 100%;
+}
+.project-img {
+  width: 100%;
+  display: block;
+  transition: 1s;
+}
+.project-overflow {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(rgba(68, 68, 68, 0.6), rgba(68, 68, 68, 0.8));
+}
+.project-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+.project-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}/*# sourceMappingURL=main.css.map */
